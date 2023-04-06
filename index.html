@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Risorse Esterne -->
+    <link rel="stylesheet" href="./CSS/styleIndex.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="./JavaScript/scriptIndex.js"></script>
+	<style>
+		
+	</style>
+    <title>Bomb!</title>
+</head>
+<body>
+    <h1 class="title" id="logo">BOMB!</h1>
+    <h2 class="notifier">TEST</h2>
+    <img src="./SVG/arrows-fullscreen.svg" alt="full screen button" class="fullscreenButton" onclick="fullscreen()">
+    <img src="./SVG/show-rules.svg" alt="show rules" id="showOverlayButton">
+
+    <div class="overlayInstruction">
+        <h1 class="title">REGOLAMENTO</h1>
+        <div class="instructionContainer">
+            1) test
+            1) test
+            1) test
+            1) test
+            1) test
+        </div>
+    </div>
+
+    <!-- FORM PLAYER -->
+    <div class="formPlayer">
+        <h2 class="formTitle">Chi parteciperà a questa partita?</h2>
+        <div class="playersContainer">
+            <input type="number" name="livesChooser" id="livesSelector" class="playerName" placeholder="Numero di vite (max 10)" min="1" max="10" onchange="livesInput(this)">
+            <div class="players">
+                <input type="text" name="player1" placeholder="Nome Giocatore 1" class="playerName" onchange="checkSamePlayer(this)">
+                <input type="text" name="player2" placeholder="Nome Giocatore 2" class="playerName" onchange="checkSamePlayer(this)">
+            </div>
+        </div>
+        <div class="button">
+            <img src="./SVG/person-dash.svg" alt="Remove player button" class="removePlayer" onmouseover="onRemPlayer()" onmouseleave="leaveRemPlayer()" onclick="removePlayer()">
+            <img src="./SVG/check-circle.svg" alt="Confirm player button" class="confirmPlayer" onmouseover="onConfirmPlayer()" onmouseleave="leaveConfirmPlayer()">
+            <img src="./SVG/person-add.svg" alt="Add player button" class="addPlayer" onmouseover="onAddPlayer()" onmouseleave="leaveAddPlayer()" onclick="addPlayer()">
+        </div>        
+    </div>
+
+    <img src="./SVG/black-bomb.svg" alt="bomb" id="bombSVG">
+    <p class="title minimize">Clicca sulla bomba per avviare il round</p>
+
+    <!-- GAME SCENE -->
+    <audio src="./Audio/bomb.mp3" id="bombSound" loop>Errore nel caricamento della traccia audio!!</audio>
+    <audio src="./Audio/explosion.wav" id="explosion">Errore nel caricamento della traccia audio!!</audio>
+    <div class="gameScene">
+
+        <div class="wordContainer">
+            <p id="dice"></p>
+            <p id="word"></p>
+        </div>
+
+        <div class="scores">
+            <table id="tablePlayer">
+                <caption>VITE RIMANENTI</caption>
+            </table>
+        </div>
+        
+    </div>
+
+    <footer>2022 Emilio Garzia&reg;, <var>ver 1.4</var></footer>
+    <script src="./JavaScript/myJQuery.js"></script>
+</body>
+</html>

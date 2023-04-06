@@ -1,0 +1,175 @@
+/* Importazione font da API Google */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Marhey:wght@500&display=swap');
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-around;
+    background-image: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+}
+
+/* Titolo */
+.title{
+    font-family: "Luckiest Guy";
+    color: rgb(104, 47, 47);
+    font-size: 7em;
+    margin: auto;
+    animation-duration: 1s;
+    animation-name: titleAnimation;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    text-shadow: 3px 3px 10px black;
+    padding-bottom: 1em;
+    text-align: center;
+}
+@keyframes titleAnimation {
+    from{
+        color: white;
+        transform: rotate(-4deg);
+    }
+    to{
+        color: yellow;
+        transform: rotate(4deg);
+    }
+}
+
+/*  Notifier  */
+.notifier{
+    color: black;
+    font-family: Marhey;
+    background-color: rgb(238, 255, 0);
+    max-width: fit-content;
+    margin: auto;
+    border-radius: 30px;
+    padding: 1rem;
+    margin-bottom: 10px;
+}
+
+/*------------- INSTRUCIOTN OVERLAY ---------------*/
+.overlayInstruction{
+    background-color: rgba(0, 0, 0, 0.808);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.instructionContainer{
+    background-color: white;
+    border-radius: 30px;
+    padding: 2rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+/* Form iniziale sulle impostazioni della partita */
+.formPlayer{
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 20px black;
+    width: 70%;
+    margin: auto; 
+    font-family: Marhey;
+    font-size: 1em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+.playersContainer, .players{
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.playerName{
+    box-shadow: 3px 3px 5px black;
+    border-radius: 5px;
+    padding: 0.8em;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: red;
+    font-family: Marhey;
+    font-size: 1em;
+}
+.button{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 4em;
+    height: 4em;
+    cursor: pointer;
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+img:hover{ transform: scale(1.3,1.3); }
+.fullscreenButton{
+    width: 3em;
+    height: 3em;
+    position: fixed;
+    right: 2em;
+    top: 1em;
+}
+
+#showOverlayButton{
+    width: 6em;
+    height: 6em;
+    position: fixed;
+    left: 2em;
+    top: 1em;
+}
+
+/*------------------GAME SCENE CSS---------------------*/
+.gameScene{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wordContainer, .scores, #endRoundBox{
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 5px 5px 20px black;
+    font-family: Marhey;
+    text-align: center;
+    padding: 1em;
+}
+.scores, #endRoundBox{ 
+    min-width: 10em;    
+    margin-left: 3em;
+}
+
+table, tr{
+    min-width: 10em;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+caption{ color: red; }
+
+#bombSVG{
+    margin: auto;
+    width: 20em;
+    height: 20em;
+}
+.minimize{
+    font-size: 2em;
+    animation-direction:alternate;
+}
+
+#dice{ 
+    color: red; 
+    font-size: 2em;
+}
+#word{ font-size: 6em; }
+
+footer{
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 2em;
+}
