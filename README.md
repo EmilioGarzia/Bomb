@@ -20,7 +20,7 @@ ___
 ## License
 
 $$
-f(x) = x^2 + 2x + 1 \newline
+f(x) = x^2 + 2x + 1 \newline 
 = (x + 1)^2
 $$
 
