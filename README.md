@@ -2,6 +2,10 @@
 ___
 
 ## Description
+$$
+x_1 = 10\\
+y_2 = 30
+$$
 ___
 
 ## How to execute
