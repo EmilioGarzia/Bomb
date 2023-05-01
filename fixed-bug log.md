@@ -21,3 +21,6 @@ ___
 ### version 1.5
 * Added massive CSS code to update the responsivity property of game
     * Now ***"Bomb!"*** can run correctly on mobile devices without graphical glithces
+$$
+x_1
+$$
